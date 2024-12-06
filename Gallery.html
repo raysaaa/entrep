@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- check this website out "https://tundesify.github.io/html--project/" -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Socials</title>
+  <title>Artisanal Jams |  Jammylicious Spreads</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@600&family=Dancing+Script:wght@400..700&family=Great+Vibes&family=Satisfy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@600&family=Dancing+Script:wght@400..700&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Faculty+Glyphic&family=Great+Vibes&family=Satisfy&family=Sour+Gummy:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <style>
+    .titlebar {
+      width: 100%;
+      height: 100%;
+      background-color: rgb(8, 8, 8);
+      padding: 10px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0%;
+      left: 0%;
+      right: 0%;
+      z-index: 99;
+      border-bottom: solid black 3px;
+    }
+    .logo {
+      align-items: center;
+      border-radius: 10px;
+      width: 250px;
+      height: 55px;
+    }
+    .nav-button {
+      color: white;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.5rem;
+      background-color: black;
+      border-radius: 0.25rem;
+      border: 0.1rem solid black;
+      font-weight: 600;
+      cursor: pointer;
+      position: absolute;
+      right: 200px;
+      transition: 0.5s;
+    }
+
+    .nav-button img {
+      width: 20px;
+    }
+
+    .nav-button span {
+      font-size: 1.1rem;
+    }
+
+    .nav-button:hover {
+      color: white;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.5rem;
+      background-color: cadetblue;
+      border-radius: 0.25rem;
+      border: 0.1rem solid cadetblue;
+      font-weight: 600;
+      cursor: pointer;
+      position: absolute;
+      right: 200px;
+    }
+
+    /* Dropdown Menu */
+
+    .menu {
+      display: none;
+      position: absolute;
+      top: 105%;
+      left: 0;
+      right: 0;
+      background-color: black;
+      padding: 10px 0;
+      text-align: center;
+      min-width: 100%;
+      transition: 0.5s;
+    }
+
+    .menu a {
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      display: block;
+      white-space: nowrap;
+      transition: 0.5s;
+    }
+    .menu a:hover {
+      background-color: darkgray;
+    }
+
+    /* Show dropdown menu when hovering over nav-button */
+    .nav-button:hover .menu {
+      display: block;
+    }
+
+/* Contacts-section */
+
+    footer {
+      position: relative;
+      width: 100%;
+      height: auto;
+      padding: 50px 100px;
+      background: #000000;
+    }
+
+    footer .container {
+      width: 100%;
+      display: inline-flex;
+      gap: 65px;
+    }
+
+    footer .container .profile h2 {
+      position: relative;
+      color: whitesmoke;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    footer .container .profile p {
+      color: whitesmoke;
+      text-align: justify;
+    }
+
+    footer .container .sci {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: repeat(4, 50px);
+    }
+
+    footer .container .sci li {
+      list-style: none;
+    }
+
+    footer .container .sci li a {
+      display: inline-block;
+      width: 36px;
+      height: 36px;
+      background: #fff;
+      display: grid;
+      align-content: center;
+      justify-content: center;
+      text-decoration: none;
+      cursor: pointer;
+      border-radius: 50%;
+      transition: 0.5s;
+    }
+
+    footer .container .sci li a i {
+      color: #000000;
+      font-size: 20px;
+    }
+
+
+    footer .container .sci li a:hover {
+      background: #e13062;
+    }
+
+    footer .container .links {
+      position: relative;
+    }
+
+    footer .container .links h2 {
+      color: whitesmoke;
+      margin-bottom: 12px;
+    }
+
+    footer .container .links ul li {
+      list-style: none;
+    }
+
+    footer .container .links ul li a {
+      color: whitesmoke;
+      text-decoration: none;
+      margin-bottom: 15px;
+      display: inline-block;
+      transition: 0.5s;
+    }
+
+    footer .container .links ul li a:hover {
+      color: #e13062;
+    }
+
+    footer .container .contacts h2 {
+      color: whitesmoke;
+      margin-bottom: 20px;
+    }
+
+    footer .container .contacts .number {
+      position: relative;
+    }
+
+    footer .container .contacts .number li {
+      display: grid;
+      grid-template-columns: 30px 1fr;
+      margin-bottom: 16px;
+      list-style: none;
+    }
+
+    footer .container .contacts .number li span {
+      color: whitesmoke;
+      font-size: 20px;
+    }
+
+    footer .container .contacts .number li p {
+      color: whitesmoke;
+    }
+
+    footer .container .notice {
+      position: relative;
+    }
+
+    footer .container .notice img {
+      width: 35px;
+      margin-top: 0px;
+    }
+
+    footer .container .notice p {
+      color: whitesmoke;
+      text-align: justify;
+      margin-left: 1px;
+      line-height: 25px;
+    }
+
+    .copyright {
+      width: 100%;
+      background: #000000;
+      padding: 20px 100px 30px;
+      text-align: center;
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .copyright a {
+      color: #2117da;
+      font-size: medium;
+      cursor: pointer;
+      text-decoration: none;
+      transition: 0.5s;
+    }
+
+    .copyright a:hover {
+      color: #2117da;
+    }
+
+    /* Font */
+
+    .kanit-medium-italic {
+      text-align: center;
+      font-family: "Kanit", sans-serif;
+      font-weight: 500;
+      font-style: italic;
+    }
+
+    .kanit-medium {
+      font-size: large;
+      text-align: justify;
+      font-family: "Kanit", sans-serif;
+      font-weight: 500;
+      font-style: normal;
+    }
+
+    /* Hero Section */
+
+    .hero {
+      width: 100%;
+      height: 650px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .fade {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: 1;
+      background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 650px);
+    }
+
+    #video1 {
+      position: absolute;
+      filter: brightness(120%);
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+
+    #img2{
+      position: absolute;
+      width: 200px;
+      top: 30%;
+      left: 10%;
+      z-index: 1;
+    }
+
+    .hero li{
+      list-style: none;
+      position: relative; 
+      display: inline-block; 
+      margin-right: 10px; 
+      font-size: larger;
+      font-weight: 600;
+      font-family: 'Trebuchet MS';
+      color: white;
+      margin-top: 28%;
+      left: 10%;
+      z-index: 1;
+    }
+
+    .hero p{
+      z-index: 1;
+      position: absolute;
+      font-size: large;
+      font-weight: 500;
+      font-family: 'Trebuchet MS';
+      color: white;
+      width: 550px;
+      text-align: justify;
+      line-height: 1.8rem;
+      margin-top: 15px;
+      left: 10.2%;
+    }
+
+    .hero button{
+      position: absolute;
+      color: white;
+      background: none;
+      border: #fff solid 3px;
+      border-radius: 0.5rem;
+      font-size: larger;
+      font-weight: 600;
+      font-family: 'Trebuchet MS';
+      padding: 5px;
+      margin-top: 7%;
+      left: 10.1%;
+      z-index: 1;
+      width: 100px;
+      cursor: pointer;
+      transition: 0.5s;
+    }
+
+    .hero button:hover{
+      position: absolute;
+      color: #000000;
+      background: white;
+      border: #fff solid 3px;
+      border-radius: 0.5rem;
+      font-size: larger;
+      font-weight: 600;
+      font-family: 'Trebuchet MS';
+      padding: 5px;
+      margin-top: 7%;
+      left: 10.1%;
+      z-index: 1;
+      width: 100px;
+      cursor: pointer;
+    }
+
+    /*  Me Info */
+
+    .bluefade {
+      width: 100%;
+      height: 400px;
+      position: absolute;
+      z-index: 1;
+      background: linear-gradient(0deg, rgb(3, 7, 30), rgba(3, 7, 30, 0.681), transparent 50%);
+    }
+
+    .container {
+      width: 100%;
+      height: 350px;
+      position: relative;
+    }
+
+    .movie {
+      width: 100%;
+      height: 420px;
+      background-color: black;
+      background-position: right;
+      position: relative;
+    }
+
+    .movie p {
+      position: absolute;
+      text-align: left;
+      color: white;
+      font-size: 30px;
+      width: 650px;
+      margin-top: 129px;
+      left: 10%;
+      z-index: 1;
+    }
+
+    .movie img {
+      width: 350px;
+      height: 300px;
+      position: absolute;
+      right: 10%; 
+      top: 45%; 
+      transform: translateY(-50%);
+      border-radius: 10px;
+      filter: brightness(70%);
+      z-index: 1;
+      transition: 0.5s;
+    }
+
+    .movie img:hover {
+      width: 355px;
+      height: 300px;
+      position: absolute;
+      right: 10%; 
+      top: 45%; 
+      transform: translateY(-50%);
+      border-radius: 10px;
+      filter: brightness(70%);
+      z-index: 1;
+      cursor: pointer;
+    }
+
+    .blackfade {
+      position: absolute;
+      width: 100%;
+      height: 800px;
+      z-index: 1;
+      background: linear-gradient(0deg, rgb(0, 0, 0), rgba(0, 0, 0, 0.049), transparent 60%);
+    }
+
+    .synopsis{
+      position: relative;
+      width: 100%;
+      height: 750px;
+      background-color: #03071e;
+    }
+
+    .synopsis h2{
+      text-align: center;
+      font-size: 55px;
+      color: whitesmoke;
+      padding-top: 5px;
+    }
+
+    .synopsis img{
+      filter: brightness(70%);
+      width: 420px;
+      height: 550px;
+      margin-top: 2%;
+      border-radius: 20px;
+      margin-left: 14.9%;
+      transition: 0.5s;
+      position: absolute;
+      z-index: 2;
+    }
+
+    .synopsis img:hover{
+      filter: brightness(70%);
+      width: 425px;
+      height: 550px;
+      margin-top: 2%;
+      border-radius: 20px;
+      margin-left: 14.9%;
+      cursor: pointer;
+      position: absolute;
+      z-index: 2;
+    }
+
+    .synopsis p{
+      text-align: justify;
+      color: #fff;
+      width: 550px;
+      float: right;
+      margin-top: 50px;
+      margin-right: 15%;
+      font-size: 20px;
+      font-family: 'Trebuchet MS';
+      font-weight: 500;
+      line-height: 1.9rem;
+    }
+
+    .brand-name1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.19rem;
+    color: #d35d6e;
+}
+  </style>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <img src="img/logojam.png" alt="Jam Icon">
+            <a href="index.html"><span class="brand-name1">Jammy-licious Spreads</span></a>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav class="nav-links-container">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="jam.html">Our Jams</a></li>
+                <li><a href="#">Recipes</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+  <!-- Hero Section -->
+
+  <div class="hero">
+    <div class="fade"></div>
+      <video id="video1" autoplay loop muted>
+        <source src="img/fruitsvids.mp4" type="video/mp4">
+      </video>
+      <img src="img/logojam.png" alt="name" id="img2" draggable="false">
+       <ul>
+        <li>GALLERY</li>
+        <li>Philippines, Cebu City</li>
+        <li>Behind the Scenes</li>
+       </ul>
+         <p>
+            Welcome to <strong>Jammylicious Spreads</strong>!
+         </p>
+        <button onclick="document.location='index.html'">Home</button>
+  </div>
+
+  <!-- Me Info -->
+  <div class="bluefade"></div>
+  <div class="container">
+    <div class="movie">
+      <p class="kanit-medium">
+        SO FRESH!
+      </p>
+        <img src="img/mainjam.png" alt="jammy">
+    </div>
+  </div>
+  <div class="blackfade"></div>
+  <div class="synopsis">
+    <h2>Gallery</h2>
+      <img src="img/gallery1.jpg" alt="bombaclart">
+      <p>
+        text here
+      <br>
+      <br>
+        text here
+      </p>
+  </div>
+
+<!-- Socials section -->
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-about">
+            <h3>About Jammy-licious Spreads</h3>
+            <p>Jammy-licious Spreads provides jams that are palatable, unique taste, and healthier than other spreads which contained preservatives. Jammy-licious Spreads is a must-go shop for a yummy-licious add-ons to any of your favourite snacks.</p>
+        </div>
+        <div class="footer-social">
+            <h3>Follow Us</h3>
+            <p>Stay connected and follow us on social media:</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/raizaaaaaaaaaa"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.tiktok.com/@raysaa790"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.instagram.com/rayysaaaa_"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="shop.html">Shop</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="contact.html">Contact</a></li>
+          </ul>
+      </div>
+        <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p>Email: raizaperesores@gmail.com</p>
+            <p>Phone: +639278026832</p>
+            <p>Address: Cebu City, Cebu, Philippines</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2024 Jammy-licious Spreads. All rights reserved.</p>
+    </div>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>
