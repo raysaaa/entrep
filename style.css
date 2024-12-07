@@ -122,6 +122,7 @@ body{
 }
 @media (max-width: 600px) {
     .carousel {
+        margin-left: -15px;
         margin-top: 60px;
         width: 100vw;
         height: 50vh;
@@ -483,9 +484,9 @@ h1 {
 
     /* Adjust positions for mobile devices */
     .benefit:nth-child(1) { top: 10%; left: 50%; transform: translate(-50%, -50%); }
-    .benefit:nth-child(2) { top: 30%; left: 80%; transform: translate(-50%, -50%); }
+    .benefit:nth-child(2) { top: 15%; left: 80%; transform: translate(-50%, -50%); }
     .benefit:nth-child(3) { bottom: 30%; left: 80%; transform: translate(-50%, 50%); }
-    .benefit:nth-child(4) { bottom: 10%; left: 50%; transform: translate(-50%, 50%); }
+    .benefit:nth-child(4) { bottom: 0%; left: 50%; transform: translate(-50%, 50%); }
     .benefit:nth-child(5) { bottom: 30%; left: 20%; transform: translate(-50%, 50%); }
 }
 
