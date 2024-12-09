@@ -495,7 +495,7 @@ h1 {
         height: 40px;
     }
 
-    /* Adjust positions for mobile devices */
+
     .benefit:nth-child(1) { top: 10%; left: 50%; transform: translate(-50%, -50%); }
     .benefit:nth-child(2) { top: 15%; left: 80%; transform: translate(-50%, -50%); }
     .benefit:nth-child(3) { bottom: 30%; left: 80%; transform: translate(-50%, 50%); }
