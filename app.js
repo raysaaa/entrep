@@ -46,5 +46,5 @@ let refreshInterval = setInterval(()=> {next.click()}, 3000);
 function toggleMenu() {
     console.log("Menu toggled!");
     const navLinks = document.querySelector('.nav-links-container');
-    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+    navLinks.classList.toggle('show');
 }
