@@ -11,30 +11,221 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Changa:wght@600&family=Dancing+Script:wght@400..700&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Faculty+Glyphic&family=Great+Vibes&family=Satisfy&family=Sour+Gummy:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        .footer-imgs {
+         display: flex;
+         gap: 2px;
+         justify-content: center;
+         overflow: hidden;
+        }
+        .footer-imgs img {
+            height: 40px;
+            width: 40px;
+        }
+        .second
+        {
+          margin-top: 25px;
+          justify-content: center;
+          align-items: center;
+        }
+        .second h1 {
+            font-size: 3rem;
+            color: #d34b6b; 
+        }
+   
+        .product-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 20px;
+        margin: 20px;
+        margin-bottom: 20px;
+      }
+      @media (max-width: 1200px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr); 
+  }
+}
+
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: 1fr; 
+  }
+}
+        .product-card {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        padding: 15px;
+        transition: transform 0.3s;
+      }
+
+      .product-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .product-image {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        margin: 0 auto 10px;
+        display: block;
+        object-fit: cover;
+      }
+
+      .product-card h3 {
+        font-size: 18px;
+        color: #333;
+        margin: 10px 0 5px;
+      }
+
+      .product-subtitle {
+        font-size: 14px;
+        color: #888;
+        margin-bottom: 10px;
+        font-style: italic;
+      }
+
+      .product-description {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 10px;
+      }
+
+      .price {
+        font-size: 16px;
+        color: #ff7f7f;
+        font-weight: bold;
+        margin-bottom: 15px;
+        font-family: 'Courier New', Courier, monospace;
+      }
+      .split-section {
+    display: flex;
+    
+}
+
+.split-image {
+    flex: 1;
+    overflow: hidden;
+}
+
+.split-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.split-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #333;
+
+}
+
+
+.split-content p {
+    font-size: 30px !important;
+    line-height: 1.6;
+    color: #b44b56;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-style: normal;
+    text-align: center;
+   
+}
+@media (max-width: 768px) {
+    .split-section {
+        flex-direction: column; 
+    }
+    
+    .split-image,
+    .split-content {
+        width: 100%;
+        height: auto;
+    }
+}
+.contact {
+  background-image: url('https://i.pinimg.com/736x/3f/d3/a2/3fd3a27016f3d18816abd157cdc47603.jpg'); 
+  background-size: cover;
+  background-position: center;
+  padding: 50px 10px;
+  color: #fff;
+  text-align: center;
+}
+
+.contact-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ffb74d;
+}
+
+.contact p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+.contact-info p {
+  font-size: 1.5rem;
+}
+
+.contact-info a {
+  color: #ffb74d;
+  text-decoration: none;
+}
+
+.contact-btn {
+  display: inline-block;
+  background-color: #ffb74d;
+  color: #fff;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.contact-btn:hover {
+  background-color: #f57c00;
+}
+    </style>
 </head>
 <body>
      
-    <header class="navbar">
-        <div class="logo">
-            <img src="img/logojam.png" alt="Jam Icon">
-            <a href="index.html"><span class="brand-name">Jammy-licious Spreads</span></a>
-        </div>
-        <div class="hamburger" onclick="toggleMenu()">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <nav class="nav-links-container">
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="jam.html">Our Jams</a></li>
-                <li><a href="#">Recipes</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
-    
+  <header class="navbar">
+    <div class="logo">
+        <img src="img/logojam.png" alt="Jam Icon">
+        <a href="index.html"><span class="brand-name">Jammy-licious Spreads</span></a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <nav class="nav-links-container">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="jam.html">About</a></li>
+            <li><a href="#">Our Jams</a></li>
+            <li><a href="#">Benefits</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </nav>
+</header>
     <div class="carousel">
         <div class="list">
             <div class="item active" style="--background: #EA3D41">
@@ -76,7 +267,7 @@
               to quality and flavor is endless.
           </p>
           <p>Join us on this journey as we grow and spread joy!</p>
-          <a href="about.html" class="btn">About Us</a>
+          <a href="about.html" class="btn">Our Products</a>
       </div>
       <div class="hero-image">
           <img src="img/jams.png" alt="Jam Jars">
@@ -84,51 +275,109 @@
   </header>
 
   <section class="vision-section">
-      <h2>Our Vision</h2>
-      <p>
-        To be the premier supplier of delicious and creatively unique jams with health benefits, satisfying customers with our inventive products, and setting the standard of excellence for customer satisfaction with each and every consume of our products.
-      </p>
-  </section>
+    <h2>Our Vision</h2>
+    <p>
+      To be the premier supplier of delicious and creatively unique jams with health benefits, satisfying customers with our inventive products, and setting the standard of excellence for customer satisfaction with each and every consume of our products.
+    </p>
+</section>
 
-  <section class="mission-section">
-      <h2>Our Mission</h2>
-      <p>
-        To meticulously source organic fruits locally, crafting distinctive, savory, and nutritious jams that captivate the senses and ensure a harmonious blend of flavor and sustainability, offering customers a truly delightful and nourishing experience.
-      </p>
-  </section>
-    <section>
-      <h1>What Makes Our Jam Better</h1>
+<section class="mission-section">
+    <h2>Our Mission</h2>
+    <p>
+      To meticulously source organic fruits locally, crafting distinctive, savory, and nutritious jams that captivate the senses and ensure a harmonious blend of flavor and sustainability, offering customers a truly delightful and nourishing experience.
+    </p>
+</section>
+    
+<section id="benefits">
     <div class="container">
-        <div class="center-img">
-            <img src="img/download.png" alt="Jam">
-        </div>
-
+      <h2>Why Jammylicious?</h2>
+      <p>Taste the joy in every jar!</p>
+      
+      <div class="row">
         <div class="benefit">
-            <img src="img/natural.png" alt="Natural">
-            <p>All Natural</p>
+          <img src="img/nutrients.png" alt="Nutrient Packed">
+          <h3>Packed with Nutrients</h3>
+          <p>Our jams are bursting with vitamins and antioxidants to keep you energized.</p>
         </div>
-
+        
         <div class="benefit">
-            <img src="img/preservatives.png" alt="Preservatives">
-            <p>No Preservatives</p>
+          <img src="img/fresh.png" alt="Freshly-Made">
+          <h3>Freshly Made</h3>
+          <p>Each batch is handmade with care, ensuring that you get the freshest and most flavorful jam in every jar.</p>
         </div>
-
+  
         <div class="benefit">
-            <img src="benefit3.png" alt="MSG">
-            <p>No Added MSG</p>
+          <img src="img/natural.png" alt="All-Natural">
+          <h3>All-Natural Ingredients</h3>
+          <p>No artificial stuff—just pure fruit goodness in every jar.</p>
         </div>
-
+  
         <div class="benefit">
-            <img src="img/highqual.png" alt="Quality">
-            <p>High Quality</p>
+          <img src="img/versatile.png" alt="Versatile">
+          <h3>Versatile</h3>
+          <p>Perfect for spreading, baking, or adding to your favorite recipes!</p>
         </div>
-
-        <div class="benefit">
-            <img src="img/freshly.png" alt="Fresh">
-            <p>Freshly Made</p>
+      </div>
+    </div>
+  </section>
+    <section class="second">
+        <h1>Our Products</h1>
+        <div class="product-grid">
+        <div class="product-card">
+            <img src="img/strawberry-jam.jpg" alt="Product 1" class="product-image">
+            <h3>Strawberry Jam</h3>
+            <p class="product-subtitle">Artisanal Jam</p>
+            <p class="product-description">Bursting with the vibrant sweetness of sun-ripened strawberries, our jam is a luscious treat perfect for spreading on toast, drizzling over desserts, or savoring straight from the jar.</p>
+            <p class="price">₱165.00</p> 
+        </div>
+        <div class="product-card">
+            <img src="img/avocado-jam.jpg" alt="Product 2" class="product-image">
+            <h3>Avocado Jam</h3>
+            <p class="product-subtitle">Artisanal Jam</p>
+            <p class="product-description">A creamy twist on tradition, this unique jam blends the rich, buttery flavor of ripe avocados with just the right hint of sweetness—perfect for adventurous palates.</p>
+            <p class="price">₱150.00</p> 
+        </div>
+        <div class="product-card">
+            <img src="img/mango-jam.jpg" alt="Product 3" class="product-image">
+            <h3>Mango Jam</h3>
+            <p class="product-subtitle">Artisanal Jam</p>
+            <p class="product-description">Tropical sunshine in every spoonful, our mango jam captures the golden sweetness of perfectly ripened mangoes, making every bite a juicy delight.</p>
+            <p class="price">₱150.00</p> 
+        </div>
+        <div class="product-card">
+            <img src="img/banana-jam.jpg" alt="Product 4" class="product-image">
+            <h3>Banana Jam</h3>
+            <p class="product-subtitle">Artisanal Jam</p>
+            <p class="product-description">Smooth, sweet, and comforting, this jam transforms the natural richness of bananas into a spread that’s simply irresistible on warm bread or pancakes.</p>
+            <p class="price">₱600.00</p> 
+        </div>
+        <div class="product-card">
+            <img src="img/papaya-jam.jpg" alt="Product 5" class="product-image">
+            <h3>Papaya Jam</h3>
+            <p class="product-subtitle">Artisanal Jam</p>
+            <p class="product-description">Exotic and flavorful, our papaya jam is a tropical treasure that pairs the fruit’s natural sweetness with a refreshing hint of citrus.</p>
+            <p class="price">₱120.00</p> 
         </div>
     </div>
     </section>
+    <section class="split-section">
+        <div class="split-content">
+            <p>Explore our delightful range today and savor the irresistible flavors of our handcrafted jams and spreads. Each jar is made with the finest ingredients, bringing you a taste of homemade goodness in every bite!</p>
+        </div>
+    </section>
+    <section class="contact">
+        <div class="contact-container">
+          <h2>Want to Buy Jammylicious Spreads?</h2>
+          <p>Simply reach out to us via email or contact number below!</p>
+          
+          <div class="contact-info">
+            <p>Email: <a href="mailto:info@jammylicious.com">info@jammylicious.com</a></p>
+            <p>Phone: <a href="tel:+639XXXXXXXXX">+639X</a></p>
+          </div>
+          
+          <a href="mailto:info@jammylicious.com" class="contact-btn">Contact Us Now!</a>
+        </div>
+      </section>
     <footer class="footer">
       <div class="footer-container">
           <div class="footer-about">
@@ -161,10 +410,26 @@
               <p>Address: Cebu City, Cebu, Philippines</p>
           </div>
       </div>
-  
+          <div class="footer-imgs">
+            <img src="https://static.wixstatic.com/media/d6ff18_88a8b139ebd541989d0b3e86ddb5d272~mv2.png/v1/crop/x_126,y_1854,w_411,h_450/fill/w_95,h_104,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/d6ff18_88a8b139ebd541989d0b3e86ddb5d272~mv2.png" alt="">
+            <img src="https://static.wixstatic.com/media/d6ff18_88a8b139ebd541989d0b3e86ddb5d272~mv2.png/v1/crop/x_921,y_817,w_329,h_384/fill/w_90,h_105,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/d6ff18_88a8b139ebd541989d0b3e86ddb5d272~mv2.png" alt="">
+            <img src="https://static.wixstatic.com/media/d6ff18_88a8b139ebd541989d0b3e86ddb5d272~mv2.png/v1/crop/x_1363,y_721,w_277,h_312/fill/w_60,h_68,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/d6ff18_88a8b139ebd541989d0b3e86ddb5d272~mv2.png" alt="">
+            <img src="https://static.wixstatic.com/media/d6ff18_88a8b139ebd541989d0b3e86ddb5d272~mv2.png/v1/crop/x_1089,y_487,w_285,h_310/fill/w_60,h_72,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/d6ff18_88a8b139ebd541989d0b3e86ddb5d272~mv2.png" alt="">
+            <img src="https://static.wixstatic.com/media/d6ff18_88a8b139ebd541989d0b3e86ddb5d272~mv2.png/v1/crop/x_1682,y_292,w_458,h_545/fill/w_87,h_104,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/d6ff18_88a8b139ebd541989d0b3e86ddb5d272~mv2.png" alt="">
+            <img src="https://static.wixstatic.com/media/d6ff18_88a8b139ebd541989d0b3e86ddb5d272~mv2.png/v1/crop/x_115,y_1346,w_329,h_384/fill/w_90,h_105,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/d6ff18_88a8b139ebd541989d0b3e86ddb5d272~mv2.png" alt="">
+            <img src="https://static.wixstatic.com/media/d6ff18_88a8b139ebd541989d0b3e86ddb5d272~mv2.png/v1/crop/x_682,y_291,w_329,h_384/fill/w_90,h_105,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/d6ff18_88a8b139ebd541989d0b3e86ddb5d272~mv2.png" alt="">
+            <img src="https://static.wixstatic.com/media/d6ff18_88a8b139ebd541989d0b3e86ddb5d272~mv2.png/v1/crop/x_1940,y_1091,w_411,h_645/fill/w_87,h_137,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/d6ff18_88a8b139ebd541989d0b3e86ddb5d272~mv2.png" alt="">
+            <img src="https://static.wixstatic.com/media/d6ff18_88a8b139ebd541989d0b3e86ddb5d272~mv2.png/v1/crop/x_1033,y_1166,w_369,h_327/fill/w_77,h_68,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/d6ff18_88a8b139ebd541989d0b3e86ddb5d272~mv2.png" alt="">
+            <img src="https://static.wixstatic.com/media/d6ff18_88a8b139ebd541989d0b3e86ddb5d272~mv2.png/v1/crop/x_238,y_872,w_329,h_384/fill/w_78,h_90,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/d6ff18_88a8b139ebd541989d0b3e86ddb5d272~mv2.png" alt="">
+            <img src="https://static.wixstatic.com/media/d6ff18_88a8b139ebd541989d0b3e86ddb5d272~mv2.png/v1/crop/x_1407,y_1015,w_369,h_394/fill/w_66,h_71,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/d6ff18_88a8b139ebd541989d0b3e86ddb5d272~mv2.png" alt="">
+            <img src="https://static.wixstatic.com/media/d6ff18_88a8b139ebd541989d0b3e86ddb5d272~mv2.png/v1/crop/x_395,y_1546,w_329,h_384/fill/w_90,h_105,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/d6ff18_88a8b139ebd541989d0b3e86ddb5d272~mv2.png" alt="">
+            <img src="https://static.wixstatic.com/media/d6ff18_88a8b139ebd541989d0b3e86ddb5d272~mv2.png/v1/crop/x_648,y_1095,w_329,h_380/fill/w_78,h_90,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/d6ff18_88a8b139ebd541989d0b3e86ddb5d272~mv2.png" alt="">
+            <img src="https://static.wixstatic.com/media/d6ff18_88a8b139ebd541989d0b3e86ddb5d272~mv2.png/v1/crop/x_644,y_696,w_329,h_384/fill/w_90,h_105,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/d6ff18_88a8b139ebd541989d0b3e86ddb5d272~mv2.png" alt="">
+            <img src="https://static.wixstatic.com/media/d6ff18_88a8b139ebd541989d0b3e86ddb5d272~mv2.png/v1/crop/x_652,y_1796,w_411,h_450/fill/w_74,h_80,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/d6ff18_88a8b139ebd541989d0b3e86ddb5d272~mv2.png" alt="">
+        </div>
       <div class="footer-bottom">
           <p>&copy; 2024 Jammy-licious Spreads. All rights reserved.</p>
       </div>
   </footer>
-  <script src="app.js"></script>
+  <script src="script.js"></script>
 </html>
