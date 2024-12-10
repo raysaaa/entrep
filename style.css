@@ -429,7 +429,6 @@ body{
     color: #555;
   }
   
-  /* Responsive Styles */
   @media (max-width: 768px) {
     #benefits {
       padding: 40px 10px;
